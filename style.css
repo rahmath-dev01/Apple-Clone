@@ -1,376 +1,64 @@
-@font-face {
-  font-family: pokemon;
-  src: url(./sf-pro-text_regular.woff2);
-}
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html,body{
+html, body {
   height: 100%;
   width: 100%;
- background-color: rgb(0, 0, 0);
 }
-
 #main{
   height: 100%;
   width: 100%;
-  background-color: rgb(0, 0, 0);
-  padding: 10px ;
+  padding: 20px;
+  background-color: rgb(57, 130, 124);
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
   gap: 30px;
+  flex-wrap: wrap;
 }
-
- #cards{
-  height: 350px;
-  width: 250px;
-  border-radius:10px ;
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
- font-family: pokemon;
- font-size: 15px;
- overflow: hidden;
- 
+.card{
+  height: 330px;
+  width: 340px;
+  background-color: aliceblue;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
 }
-.card1{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  padding: 25px;
-  box-shadow: 10px 10px 20px rgba(1, 98, 253, 0.778);
-  
-}
-.card1 img{
-  height: 100px;
-  width: 100px;
+.card img{
+  height: 100%;
+  width: 100%;
   object-fit: cover;
-  border-radius: 50%;
+  
   
 }
-.card1 p{
-  font-size: 16px;
-  text-align: center;
+.bottom{
+  height: 30%;
+  width: 100%;
+  background: linear-gradient(transparent,black);
+  position: absolute;
+  bottom: -30%;
+  transition: all ease 0.5s;
 }
-.card1 button{
-  height: 40px ;
-  width: 80px;
-  border: none;
-  background-color: rgb(59, 82, 235);
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
+.card:hover .bottom{
+bottom: 0;
 }
-.card1 button:hover{
-  color: rgb(59, 82, 235);
-  background-color: rgb(167, 167, 167);
-
-}
-.card2{
+.bottom{
+  padding: 20px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
-  padding: 25px;
-  box-shadow: 10px 10px 20px rgba(1, 98, 253, 0.778);
-  
+  font-size: 25px;
+  font-weight: 400px;
 }
-.card2 img{
-  height: 100px;
-  width: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  
-}
-.card2 p{
-  font-size: 16px;
-  text-align: center;
-}
-.card2 button{
-  height: 40px ;
-  width: 80px;
-  border: none;
-  background-color: rgb(59, 82, 235);
+.bottom h3{
   color: white;
-  border-radius: 10px;
-  cursor: pointer;
 }
-.card2 button:hover{
-  color: rgb(59, 82, 235);
-  background-color: rgb(167, 167, 167);
-
-}
-.card3{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  padding: 25px;
-  box-shadow: 10px 10px 20px rgba(1, 98, 253, 0.778);
-  
-}
-.card3 img{
-  height: 100px;
-  width: 100px;
-  object-fit: cover;
+.bottom h4{
+  background-color: white;
+  color: black;
+  padding: 5px 8px;
   border-radius: 50%;
-  
 }
-.card3 p{
-  font-size: 16px;
-  text-align: center;
-}
-.card3 button{
-  height: 40px ;
-  width: 80px;
-  border: none;
-  background-color: rgb(59, 82, 235);
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.card3 button:hover{
-  color: rgb(59, 82, 235);
-  background-color: rgb(167, 167, 167);
-
-}
-.card4{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  padding: 25px;
-  box-shadow: 10px 10px 20px rgba(1, 98, 253, 0.778);
-  
-}
-.card4 img{
-  height: 100px;
-  width: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  
-}
-.card4 p{
-  font-size: 16px;
-  text-align: center;
-}
-.card4 button{
-  height: 40px ;
-  width: 80px;
-  border: none;
-  background-color: rgb(59, 82, 235);
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.card4 button:hover{
-  color: rgb(59, 82, 235);
-  background-color: rgb(167, 167, 167);
-
-}
-.card5{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  padding: 25px;
-  box-shadow: 10px 10px 20px rgba(1, 98, 253, 0.778);
-  
-}
-.card5 img{
-  height: 100px;
-  width: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  
-}
-.card5 p{
-  font-size: 16px;
-  text-align: center;
-}
-.card5 button{
-  height: 40px ;
-  width: 80px;
-  border: none;
-  background-color: rgb(59, 82, 235);
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.card5 button:hover{
-  color: rgb(59, 82, 235);
-  background-color: rgb(167, 167, 167);
-
-}
-.card6{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  padding: 25px;
-  box-shadow: 10px 10px 20px rgba(1, 98, 253, 0.778);
-  
-}
-.card6 img{
-  height: 100px;
-  width: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  
-}
-.card6 p{
-  font-size: 16px;
-  text-align: center;
-}
-.card6 button{
-  height: 40px ;
-  width: 80px;
-  border: none;
-  background-color: rgb(59, 82, 235);
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.card6 button:hover{
-  color: rgb(59, 82, 235);
-  background-color: rgb(167, 167, 167);
-
-}
-.card7{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  padding: 25px;
-  box-shadow: 10px 10px 20px rgba(1, 98, 253, 0.778);
-  
-}
-.card7 img{
-  height: 100px;
-  width: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  
-}
-.card7 p{
-  font-size: 16px;
-  text-align: center;
-}
-.card7 button{
-  height: 40px ;
-  width: 80px;
-  border: none;
-  background-color: rgb(59, 82, 235);
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.card7 button:hover{
-  color: rgb(59, 82, 235);
-  background-color: rgb(167, 167, 167);
-
-}
-.card8{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  padding: 25px;
-  box-shadow: 10px 10px 20px rgba(1, 98, 253, 0.778);
-  
-}
-.card8 img{
-  height: 100px;
-  width: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  
-}
-.card8 p{
-  font-size: 16px;
-  text-align: center;
-}
-.card8 button{
-  height: 40px ;
-  width: 80px;
-  border: none;
-  background-color: rgb(59, 82, 235);
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.card8 button:hover{
-  color: rgb(59, 82, 235);
-  background-color: rgb(167, 167, 167);
-
-}
-.card9{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  padding: 25px;
-  box-shadow: 10px 10px 20px rgba(1, 98, 253, 0.778);
-  
-}
-.card9 img{
-  height: 100px;
-  width: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  
-}
-.card9 p{
-  font-size: 16px;
-  text-align: center;
-}
-.card9 button{
-  height: 40px ;
-  width: 80px;
-  border: none;
-  background-color: rgb(59, 82, 235);
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.card9 button:hover{
-  color: rgb(59, 82, 235);
-  background-color: rgb(167, 167, 167);
-
-}.card10{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  padding: 25px;
-  box-shadow: 10px 10px 20px rgba(1, 98, 253, 0.778);
-  
-}
-.card10 img{
-  height: 100px;
-  width: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  
-}
-.card10 p{
-  font-size: 16px;
-  text-align: center;
-}
-.card10 button{
-  height: 40px ;
-  width: 80px;
-  border: none;
-  background-color: rgb(59, 82, 235);
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.card10 button:hover{
-  color: rgb(59, 82, 235);
-  background-color: rgb(167, 167, 167);
-
+.bottom h4:hover{
+  color: red;
 }
