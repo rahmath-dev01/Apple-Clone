@@ -1,7 +1,12 @@
 @font-face {
   font-family: marvel;
-  src: url(./Hangyaku-G3rpg.ttf);
+  src: url(./WFVisualSans-SemiBold-aa0e55353b6a1b897f76a0fcbf5561fa243ce1b8b9f6aebcb5a186f0536713b1.woff2);
 }
+@font-face {
+  font-family: normal ;
+  src: url(./WFVisualSans-RegularText-46461986901f80620e484e70aa8cbb90ede25a01351d464819a4e47a3f38ea43.woff2);
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -25,6 +30,15 @@ html,body{
     border: none;
     color: white;
     font-size: 14px;
+  }
+  @mixin Btns($bg-color,$color){
+    padding: 10px 20px;
+    background-color: $bg-color;
+    color: $color;
+    border-radius: 50px ;
+    border: none;
+    font-size: 15px;
+    font-weight: 300;
   }
   
 
@@ -70,34 +84,90 @@ ul{
 .red{
   height: 600px;
   width: 50%;
-  background-color: red;
+  background-color: rgb(255, 255, 255);
   margin-left: 40px;
 }
 .blue{
-  height: 600px;
+  height: 500px;
   width: 40%;
-  
+  border-radius: 100px;
   margin-left: 40px;
 
+
   video{
-    height: 500px;
+    
     width: 100%;
-    border-radius: 70px;
+    border-radius: 50px;
   }
 }
 }
+.hero1{
+  padding: 30px;
 
-// .hero{
-//   display: flex;
-//   background-color: red;
-//   padding: 30px;
-//   margin-top: 0%;
-//   margin-left: 30px;
-//   display: inline-block;
-  
-//   .title{
-//     font-size: 60px;
-//   }
-// }
+  .title{
+    font-size: 350%;
+    font-family: marvel;
+    word-spacing: 5px;
+  }
+   .title2{
+    font-size: 350%;
+    font-family: marvel;
+    margin-top: -25px;
+    word-spacing: 5px;
+  }
+  p{
+    font-size: 19px;
+    width: 60%;
+    margin-top: 8px;
+  }
+  #btns{
+    margin-top: 35px;
+
+
+
+
+    .b1{
+      @include Btns(rgb(0, 0, 0),rgb(255, 255, 255) )
+    }
+     .b2{
+      @include Btns(transparent,rgb(0, 0, 0) )
+      
+    }
+     .b3{
+      @include Btns(transparent,rgb(0, 0, 0) )
+    }
+  }
+  .inputbar{
+    padding: 20px;
+    width: 700px;
+    border: none;
+    border-radius: 40px;
+    margin-top: 10px;
+    color: black;
+    background-color: #fcf3f3ec;
+    outline: none;
+  }
+  .pop{
+    margin-top: 12px;
+    padding: 8px;
+    font-size: 20px;
+
+    .para{
+      display: inline-block;
+    }
+  }
+  .type{
+    padding: 6px 18px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    font-size:13px ;
+    font-weight: 100;
+    background-color: rgb(223, 219, 219);
+    color: black;
+    font-family: normal;
+
+  }
+}
 }
 
