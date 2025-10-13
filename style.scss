@@ -13,59 +13,91 @@ html,body{
   width: 100%;
   
 }
-main{
-  height: 100%;
-  width: 100%;
+@mixin flexCenter(){
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  @mixin Button-style(){
+    padding: 15px 20px;
+    font-weight: 600;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: 14px;
+  }
   
 
-  section{
-    height: 100%;
-    width: 100px;
-    background-color: rgb(238, 28, 28);
-    flex-grow: 1;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-  }
-  h1{
-    font-size: 40px;
-    width: 100%;
-    color: white;
-    padding: 10px;
-    font-family: marvel;
-    font-weight: 400;
-    background: linear-gradient(transparent , black);
-    border-radius: 10px;
-  }
+main{
+ 
 
-  section:hover{
-    flex-grow: 2;
-    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1); 
-  }
-  section:nth-child(1){
-    background-image: url(https://i.pinimg.com/736x/ab/eb/ce/abebced757dc87a4131b2f64ee1b3b47.jpg);
-    
-  }
-   section:nth-child(2){
-    background-image: url(https://i.pinimg.com/736x/97/0b/85/970b85bbff95604844913989001f1773.jpg);
-    
-  }
-   section:nth-child(3){
-    background-image: url(https://i.pinimg.com/736x/40/25/20/402520f773de7822faec12dfb6f004fe.jpg);
-    
-  }
-   section:nth-child(4){
-    background-image: url(https://i.pinimg.com/1200x/b4/24/2d/b4242d9e2201c238746e79e0ce46b107.jpg);
-    
-  }
-   section:nth-child(5){
-    background-image: url(https://i.pinimg.com/736x/10/b5/37/10b537b5c45040646fa1cfb0da3c8fe8.jpg);
-    
-  }
+h1 img{
+  height: 50px;
+  margin-right: 15px;
+ 
+}
+nav{
+  padding: 45px;
+  height: 50px;
+  width: 100%;
+  @include flexCenter();
+  margin-bottom: 0%;
+
+ul{
+  list-style: none;
+  @include flexCenter();
+  gap: 45px;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+.signup{
+  @include Button-style();
+  color: black;
+  background-color: transparent;
+}
+.login{
+  @include Button-style();
+  background-color: black;
+  
+  
+}
 
 }
+.color{
+  display: flex;
+
+.red{
+  height: 600px;
+  width: 50%;
+  background-color: red;
+  margin-left: 40px;
+}
+.blue{
+  height: 600px;
+  width: 40%;
+  
+  margin-left: 40px;
+
+  video{
+    height: 500px;
+    width: 100%;
+    border-radius: 70px;
+  }
+}
+}
+
+// .hero{
+//   display: flex;
+//   background-color: red;
+//   padding: 30px;
+//   margin-top: 0%;
+//   margin-left: 30px;
+//   display: inline-block;
+  
+//   .title{
+//     font-size: 60px;
+//   }
+// }
+}
+
